@@ -1,0 +1,25 @@
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>Doc</title>
+    </head>
+    <body>
+        <h1>Humanize Demo</h1>
+        <h2>Spell : {{ first|apnumber }}</h2>
+        <h2>Spell : {{ second|intword }}</h2>
+        <h2>Commas : {{ second|intcomma }}</h2>
+        <h2>Ordinal : {{ third|ordinal }}</h2>
+        <h2>Now: {{ now|naturalday }}</h2>
+        <h2>Other Day: {{ other_date |naturalday}}</h2>
+        <h2>Future: {{ future|naturaltime }}</h2>
+        <h2>Past: {{ past|naturaltime }}</h2>
+
+
+
+
+    </body>
+</html> 

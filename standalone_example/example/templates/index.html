@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title></title>
+    </head>
+    <body>
+        <div style="text-align: center; margin-top: 100px;">
+           <form method="POST">
+               {% csrf_token %}
+               <div class="field">
+                   <div class="control">
+                       {{ form.test_value }}
+
+                   </div>
+                   { % for error in form.test_value.errors %}
+                   <p class="help is-danger">{{ error }}</p>
+                   {% endfor %}
+               </div>
+               <div class="control">
+                   <button>Submit</button>
+               </div>
+           </form>
+        </div>
+    </body>
+</html>
